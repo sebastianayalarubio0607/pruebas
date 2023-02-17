@@ -38,15 +38,15 @@
                             <td scope="row">{{ $personaje['id'] }}</td>
                             <td>
                                 <a >
-                                    {{ $personaje['nombre'] }}
+                                    {{ $personaje['name'] }}
                                 </a>
 
                                 <td>
 
-                                    <!-- boton detalles 
+                                    <!-- boton detalles -->
                                     <a href="{{ route('personaje', $personaje->id) }}" type="button" class="btn btn-primary" >
                                         detalles
-                                    </a>-->
+                                    </a>
         
                                      <!-- boton detalles -->
                                  

@@ -10,9 +10,15 @@ return new class extends Migration
     {
         Schema::create('personajes', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('especie');
-            $table->string('estado');
+            $table->string('name')->nullable();
+            $table->string('image')->nullable();
+            $table->string('status')->nullable();
+            $table->string('species')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('created')->nullable();
+            $table->string('origin')->nullable();
+            $table->string('location')->nullable();
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }

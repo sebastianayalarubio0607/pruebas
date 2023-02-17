@@ -34,9 +34,15 @@ class PersonajeController extends Controller
 
         foreach ($personajes as $personaje) {
             DB::table('personajes')->insert([
-                'nombre' => $personaje['name'],
-                'especie' => $personaje['species'],
-                'estado' => $personaje['status'],
+                'name' => $personaje['name'],
+                'image' => $personaje['image'],
+                'status' => $personaje['status'],
+                'gender' => $personaje['gender'],
+                'created' => $personaje['created'],
+                'origin' => $personaje['origin']['name'],
+                'location' => $personaje['location']['name'],
+                'url' => $personaje['url'],
+
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
