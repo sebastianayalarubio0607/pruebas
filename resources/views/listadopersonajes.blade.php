@@ -48,11 +48,12 @@
                                         detalles
                                     </a>-->
         
-                                     <!-- boton detalles 
+                                     <!-- boton detalles -->
                                  
-
+                                    
+                                    
                                     <a href="{{ route('personajes.editar', ['id' => $personaje->id]) }}">Editar</a>
-                                -->
+                                
                                 </td>
                             </td>
                         </tr>

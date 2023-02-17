@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use App\Models\personajes;
@@ -69,8 +70,21 @@ class PersonajeController extends Controller
         return view('personaje', ['personaje' => $personaje]);
     }
 
+    public function edit($id)
+    {
+        $personaje = Personajes::find($id);
 
+        return view('edit', compact('personaje'));
+    }
 
+    public function update(Request $request, $id)
+    {
+        $personaje = Personajes::find($id);
+        $personaje->nombre = $request->input('nombre');
+        $personaje->especie = $request->input('especie');
+        $personaje->estado = $request->input('estado');
+        $personaje->save();
 
-
+        return redirect()->route('listadopersonajes');
+    }
 }

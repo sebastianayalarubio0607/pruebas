@@ -40,8 +40,8 @@ Route::get( 'personaje/{personaje:id}','personaje')->name('personaje');
  */
 Route::get( 'personajeEditar/{personaje:id}','edit')->name('edit');
 
-Route::get('/personajes/{id}/editar', 'PersonajesController@editar');
-Route::put('/personajes/editar/{id}', 'PersonajeController@update')->name('personajes.editar');
+
+
 
 
 
@@ -58,4 +58,18 @@ Route::put('/personajes/editar/{id}', 'PersonajeController@update')->name('perso
  */
 Route::post('/guardar-personajes',  'guardarPersonajes')->name('guardar_personajes');
 
+/**
+ * carga la vista del formulario para editar 
+ */
+Route::get('/personajes/{id}/editar', 'edit')->name('personajes.editar');
+
+/**
+ * edita y guarda los cambios en la base de datos
+ */
+Route::put('/personajes/{id}', 'update')->name('update');
+
+
 });
+
+
+
