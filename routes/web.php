@@ -15,7 +15,8 @@ Route::controller(PersonajeController::class)->group(function () {
 
 Route::get('/', function () {
     return view('tabla');
-})->name('lsitadoapi');;
+});
+
 
 /**
  * consulta la api 
