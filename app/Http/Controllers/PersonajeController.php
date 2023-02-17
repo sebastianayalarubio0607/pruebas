@@ -37,12 +37,13 @@ class PersonajeController extends Controller
                 'name' => $personaje['name'],
                 'image' => $personaje['image'],
                 'status' => $personaje['status'],
+                'species' => $personaje['species'],
+                'type' => $personaje['type'],
                 'gender' => $personaje['gender'],
                 'created' => $personaje['created'],
                 'origin' => $personaje['origin']['name'],
                 'location' => $personaje['location']['name'],
                 'url' => $personaje['url'],
-
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
@@ -86,10 +87,23 @@ class PersonajeController extends Controller
     public function update(Request $request, $id)
     {
         $personaje = Personajes::find($id);
-        $personaje->nombre = $request->input('nombre');
-        $personaje->especie = $request->input('especie');
-        $personaje->estado = $request->input('estado');
+        $personaje->name = $request->input('name');
+        $personaje->status = $request->input('status');
+        $personaje->species = $request->input('species');
+        $personaje->type = $request->input('type');
+        $personaje->gender = $request->input('gender');
+        $personaje->origin = $request->input('origin');
+        $personaje->type = $request->input('location');
+        $personaje->gender = $request->input('url');
+        
         $personaje->save();
+
+
+
+   
+     
+        
+
 
         return redirect()->route('listadopersonajes');
     }

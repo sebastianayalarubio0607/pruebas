@@ -10,9 +10,17 @@
 
     <h1 class="text-center">Personajes de Rick and Morty consultados por una API </h1>
 
-    <br>
+
+    
     <!-- inicio de la tabla consulta a la api -->
     <div style="padding: 5%">
+        <br>
+   <!--boton que guarda resultados en la tabla-->
+   <form action="{{ route('guardar_personajes') }}" method="POST">
+    @csrf
+    <button class="btn btn-primary" type="submit">Guardar personajes en la base de datos</button>
+</form>
+<br>
         <table class="table">
 
             <!--encabezaado de la tabla -->
@@ -62,11 +70,7 @@
     </div>
     <!--fin de la tabla de consulta a la api-->
 
-    <!--boton que guarda resultados en la tabla-->
-    <form action="{{ route('guardar_personajes') }}" method="POST">
-        @csrf
-        <button type="submit">Guardar personajes</button>
-    </form>
+ 
 
 
 

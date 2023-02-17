@@ -13,6 +13,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('image')->nullable();
             $table->string('status')->nullable();
+            $table->string('type')->nullable();
             $table->string('species')->nullable();
             $table->string('gender')->nullable();
             $table->string('created')->nullable();
