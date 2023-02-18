@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Rick and Morty</title>
+    <link rel="shortcut icon" href="https://play-lh.googleusercontent.com/fXQVXTma1ENwAFjsxJ4IT6GntBr3RxWP3HMSLbNdvycl-0tscOQEeJIEAmehcNOt5hCp=w240-h480-rw" />
 
     <!--cdn boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -26,12 +27,12 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/">listado personajes dede API</a>
+                        <a class="nav-link" href="/">listado personajes desde API</a>
                     </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('listadopersonajes') }}">personajes dedsde BD</a>
+                        <a class="nav-link" href="{{ route('listadopersonajes') }}">personajes desde BD</a>
                     </li>
 
                 </ul>

@@ -8,7 +8,7 @@
 
     <br>
 
-    <h1 class="text-center">Personajes de Rick and Morty consultados por una API </h1>
+    <h1 class="text-center ">Personajes de Rick and Morty consultados por una API </h1>
 
 
     
@@ -18,7 +18,7 @@
    <!--boton que guarda resultados en la tabla-->
    <form action="{{ route('guardar_personajes') }}" method="POST">
     @csrf
-    <button class="btn btn-primary" type="submit">Guardar personajes en la base de datos</button>
+    <button class="btn btn-success" type="submit">Guardar personajes en la base de datos</button>
 </form>
 <br>
         <table class="table">

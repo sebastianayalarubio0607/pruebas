@@ -3,8 +3,8 @@
 @section('content')
 <body>
     
-    
-    <p class="text-center">{{ $personaje['name'] }} </p>
+    <div style="padding: 2% 20% 2% 20%">
+    <h2 class="text-center"> detalles de {{ $personaje['name'] }} </h2>
     <div class="text-center">
         <img src="{{ $personaje['image'] }}" class="rounded">
     </div>
@@ -94,6 +94,6 @@
 
 
     </table>
-
+</div>
 </body>
 @endsection
